@@ -85,9 +85,7 @@ python main.py
 The app will be available at: http://127.0.0.1:5000/
 
 ### 📂 File Structure
-pgsql
-Copy
-Edit
+```
 ├── main.py
 ├── requirements.txt
 ├── templates/
@@ -96,4 +94,4 @@ Edit
 │   ├── admin_dashboard.html
 │   └── change_pass.html
 
-
+```
