@@ -1,42 +1,62 @@
-📝 Feedback Management System with Admin Panel (Flask + MySQL)
-🔍 Project Description
-This is a Flask-based web application designed to collect, manage, and export user feedback. It features both a public feedback submission form and a secure admin panel for managing submissions. Admins can log in, view all feedback, download feedback as a CSV file, and change their password securely. The interface is built using Bootstrap 5 to ensure a responsive and user-friendly experience.
+# 📝 Feedback Management System with Admin Panel (Flask + MySQL)
 
-⚙️ Features
-🌐 Public Feedback Form
-Visitors can submit their name, email, and feedback through the homepage.
+## 🔍 Project Description
 
-🔐 Admin Login
+This is a **Flask-based web application** designed to collect, manage, and export user feedback. It features both a public feedback submission form and a secure admin panel for managing submissions.
+
+Admins can:
+- Log in securely
+- View all submitted feedback
+- Download feedback as a CSV file
+- Change their password from the interface
+
+The interface uses **Bootstrap 5** for a responsive and modern UI.
+
+---
+
+## ⚙️ Features
+
+### 🌐 Public Feedback Form
+Visitors can submit their **name**, **email**, and **feedback** through the homepage.
+
+### 🔐 Admin Login
 Secure login system for admins to access the dashboard.
 
-📊 Admin Dashboard
-View all submitted feedback in a tabular format.
+### 📊 Admin Dashboard
+View all submitted feedback in a clean, searchable table.
 
-📥 Download CSV
+### 📥 Download CSV
 Export all feedback entries into a CSV file with one click.
 
-🔄 Change Password
+### 🔄 Change Password
 Admins can securely change their login password from the UI.
 
-💡 Bootstrap 5 UI
+### 💡 Bootstrap 5 UI
 Clean, mobile-friendly layout using the latest Bootstrap version.
 
-🛠️ Tech Stack
-Layer	Technology
-Frontend	HTML, Bootstrap 5
-Backend	Flask (Python)
-Database	MySQL
-CSV Exporting	Python csv + io
+---
 
-## install dependencies from requirements.txt, use:
+## 🛠️ Tech Stack
+
+| Layer     | Technology           |
+|-----------|----------------------|
+| Frontend  | HTML, Bootstrap 5     |
+| Backend   | Flask (Python)       |
+| Database  | MySQL                |
+| CSV Export| Python `csv` + `io`  |
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-Set up your MySQL database:
-
-sql
-Copy
-Edit
-CREATE DATABASE feedback;
+### 🗄️ Set up your MySQL database
+```CREATE DATABASE feedback;
 
 USE feedback;
 
@@ -56,23 +76,24 @@ CREATE TABLE admin_login (
 
 -- Add a sample admin user
 INSERT INTO admin_login (email, password) VALUES ('admin@example.com', 'admin123');
-Run the Flask app
+```
+### ▶️ Run the Flask App
+```
+python main.py
+```
 
-📂 File Structure
+The app will be available at: http://127.0.0.1:5000/
+
+### 📂 File Structure
 pgsql
 Copy
 Edit
-├── app.py
+├── main.py
+├── requirements.txt
 ├── templates/
 │   ├── index.html
 │   ├── admin_login.html
 │   ├── admin_dashboard.html
 │   └── change_pass.html
-📌 Optional Enhancements (Ideas)
-Add password hashing for security.
 
-Add pagination to feedback dashboard.
 
-Add email notifications on new feedback.
-
-Create admin session management.
